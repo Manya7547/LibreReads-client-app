@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import bannerbg from '../../public/banner.jpeg'
+import bannerbg from '../../public/home-banner-elibrary.png'
 
 const Banner = () => {
   return (
