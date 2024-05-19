@@ -1,13 +1,13 @@
 import React from 'react'
 import Image from 'next/image'
-import bannerbg from '../../public/home-banner-elibrary.png'
+import BannerBg from '/Users/manyasohal/Documents/elib-client-app/public/home-banner-elibrary.png'
 
 const Banner = () => {
   return (
     <div className="mx-auto max-w-7xl py-10">
     <div className="relative">
         <Image
-            src={bannerbg}
+            src={BannerBg}
             alt="billboard"
             className="h-72 w-full rounded-lg"
             height={0}
@@ -15,7 +15,7 @@ const Banner = () => {
             sizes="100vw"
         />
         <h3 className="absolute left-10 top-1/2 w-full max-w-3xl -translate-y-1/2 text-5xl font-semibold tracking-tight text-white">
-            Connect, Share and Trade Your Favourite Reads...
+            Connect, Share and Trade Your Favourite Reads!
         </h3>
     </div>
 </div>
