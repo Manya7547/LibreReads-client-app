@@ -1,23 +1,24 @@
 import Banner from "@/app/(home)/Components/Banner";
-import Image from "next/image";
 import BookList from "./Components/BookList";
 
 export default async function Home() {
-  //data fetching 
-  const response = await fetch(`${process.env.BACKEND_URL}/books`);
-  if(!response.ok){
-    throw new Error('An error occured while fetching books');
-  }
+    // Data fetching
+    const response = await fetch(`${process.env.BACKEND_URL}/books`, {
+        // Ensure to include credentials if needed
+        cache: "no-store", // Prevents caching
+    });
 
-  const books = await response.json();
-  console.log('books',books);
-  //server component 
-  //client component 
+    if (!response.ok) {
+        throw new Error("An error occurred while fetching books");
+    }
 
-  return (
-  <>
-    <Banner />
-    <BookList books={books}/>
-  </>
-  );
+    const books = await response.json();
+    console.log("books", books);
+
+    return (
+        <>
+            <Banner />
+            <BookList books={books} />
+        </>
+    );
 }
