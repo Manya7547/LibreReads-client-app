@@ -15,15 +15,15 @@ const BookCard = ({ book }: { book: Book }) => {
                 style={{ width: "auto", height: "12rem" }}
             />
             <div>
-                <h2 className="line-clamp-2 text-xl font-bold text-primary-600 text-balance">
+                <h2 className="line-clamp-2 text-xl font-bold text-black text-balance">
                     {book.title}
                 </h2>
-                <p className="font-bold text-primary-900 mt-1">
+                <p className="font-bold text-purple-900 mt-1">
                     {book.author.name}
                 </p>
                 <Link
                     href={`/book/${book._id}`}
-                    className="py-1 px-2 rounded border border-primary-500 mt-4 inline-block text-primary-500 font-medium text-sm hover:bg-primary-100 hover:border-primary-100 transition"
+                    className="py-1 px-2 rounded border border-blue-600 mt-4 inline-block text-blue-600 font-medium text-sm hover:bg-blue-600 hover:border-primary-100 transition"
                 >
                     Read
                 </Link>
